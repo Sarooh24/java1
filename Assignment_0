@@ -1,3 +1,4 @@
+// Our names and ID's
 import java.util.Scanner;
 
 public class Assignment_0{
@@ -9,7 +10,9 @@ public class Assignment_0{
 		
 		int a = new int[row][];
 		
-		//for loop
+		System.out.println("==========================================================");
+		System.out.println("=                      Available Seat                    =");
+		System.out.println("==========================================================");
 		
 		//Display array A, B, C, D
     
@@ -30,5 +33,5 @@ public class Assignment_0{
           System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
           contLoop = read.next();
         }
-	}
+    }
 }
