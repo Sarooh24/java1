@@ -1,0 +1,52 @@
+// Our names and ID's
+import java.util.Scanner;
+
+public class Assignment_00{
+	public static void main(String []args){
+		
+		Scanner read = new Scanner(System.in);
+		System.out.print("Enter how many rows in seating arrangement\t: ");
+		int row = read.nextInt();
+		
+		int a = new int[row][];
+		
+		System.out.println("==========================================================");
+		System.out.println("=                     Available Seat                     =");
+		System.out.println("==========================================================");
+		
+	        //for loop
+		for(rowCount = 1; rowCount==a.length; rowCount++)
+		{
+		  //a[][0] = rowCount;
+		}
+		
+		
+		//Display array A, B, C, D
+    
+        System.out.print("Choose your seat\t: ");
+    
+        System.out.print("Enter the row\t: ");
+        //row of 2D array
+    
+        System.out.print("Enter the row\t :");
+        //column of 2D array
+    
+        System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
+        cont = read.next();
+    
+        //while loop
+             while(cont == "y" || cont.charAt(0) == 'y')
+         {
+          System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
+          String contLoop = read.next();
+	      //Display seating
+	      if(?) //condition
+	      {
+	      	System.out.print("\n");
+	      	System.out.println("==========================================================");
+		      System.out.println("=     Final Seating - X means the seat is occupied       =");
+		      System.out.println("==========================================================");
+	      }
+        }
+    }
+}
