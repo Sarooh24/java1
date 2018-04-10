@@ -15,7 +15,11 @@ public class Assignment_0{
 		System.out.println("==========================================================");
 		
 	        //for loop
-		for(i = 1; i<a[0].length; i++)
+		for(rowCount = 1; rowCount==a.length; rowCount++)
+		{
+		  //a[][0] = rowCount;
+		}
+		
 		
 		//Display array A, B, C, D
     
