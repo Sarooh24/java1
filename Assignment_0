@@ -6,7 +6,7 @@ public class Assignment_0{
 		
 		Scanner read = new Scanner(System.in);
 		System.out.print("Enter how many rows in seating arrangement\t: ");
-		row = read.nextInt();
+		int row = read.nextInt();
 		
 		int a = new int[row][];
 		
@@ -32,7 +32,7 @@ public class Assignment_0{
     //column of 2D array
     
     System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
-    cont = read.next();
+    String cont = read.next();
     
     //while loop
         while(cont == "y" || cont.charAt(0) == 'y')
