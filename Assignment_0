@@ -11,8 +11,11 @@ public class Assignment_0{
 		int a = new int[row][];
 		
 		System.out.println("==========================================================");
-		System.out.println("=                      Available Seat                    =");
+		System.out.println("=                     Available Seat                     =");
 		System.out.println("==========================================================");
+		
+	        //for loop
+		for(i = 1; i<a[0].length; i++)
 		
 		//Display array A, B, C, D
     
@@ -28,10 +31,11 @@ public class Assignment_0{
     cont = read.next();
     
     //while loop
-        while(cont == "y")
+        while(cont == "y" || cont.charAt(0) == 'y')
         {
           System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
           contLoop = read.next();
+	  //
         }
     }
 }
