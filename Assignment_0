@@ -9,6 +9,8 @@ public class Assignment_0{
 		
 		int a = new int[row][];
 		
+		//for loop
+		
 		//Display array A, B, C, D
     
     System.out.print("Choose your seat\t: ");
@@ -22,7 +24,7 @@ public class Assignment_0{
     System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
     cont = read.next();
     
-    //loop
+    //while loop
         while(cont == "y")
         {
           System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
