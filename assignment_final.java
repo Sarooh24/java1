@@ -1,13 +1,22 @@
-/*Our names*/
+/*Names & ID's
+ *Rawan Aldhafiri - 381200096
+ *Sara Almokbel - 371200278
+ *Amirah Ahmed - 371200508
+ *Section: 201
+ **/
 import java.util.Scanner;
 public class assignment_final{
 	public static void main(String []args){
 		
 		//The variables
+		//x for chosen row in seating minus 1 (to convert number to index), y for the index of the chosen column letter
 		int x = 0, y = 0;
+		//colChoice to choose column letter
 		String colChoice = "";
+		//Choice to continue choosing seats or not both times
 		String cont1 = "", cont2 = "";
 		
+		//Instantiating Scanner object
 		Scanner kb = new Scanner(System.in);
 		
 		//Prompt user to enter no. of rows (of the array)
@@ -15,8 +24,9 @@ public class assignment_final{
 		int row = kb.nextInt();
 		System.out.print("\n");
 		
-		//The arrays
-		String[] a = new String[row];
+		//1D array for the rows
+		int[] a = new int[row];
+		//2D array for the letters
 		String[][] b = new String[row][4];
 
 		//Available seats message
@@ -27,15 +37,18 @@ public class assignment_final{
 		System.out.println("==========================================================");
 		
 		//Nested for loop to initilize elements of the arrays (according to user input)
+		//i starts from zero (index of rows) is always less than no. of elements in the 1D array (index is always less by 1)
+		//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 		for(int i = 0; i<a.length; i++)
 		{
 			for(int j = 0; j<4; j++)
 			{
+				//beginning of row (index 0)
 			   if(j==0)
 			   {
-			   	a[i] = "" + (i+1);
+			   	a[i] = j + (i+1);
 			   }
-			   
+			   //printing column letters according to 2D array index
 			   if(j==0)
 			   	b[i][j] = "A";
 			   	else if(j==1)
@@ -50,21 +63,25 @@ public class assignment_final{
 		
 		
 		//Nested for loop to print the array table (according to user input)
+		//i starts from zero (index of rows) is always less than no. of elements in the 1D array (index is always less by 1)
 		for(int i = 0; i<a.length; i++)
 		{
+			//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 			for(int j = 0; j<4; j++)
 			{
+				//beginning of row (index 0)
 			   if(j==0)
 			   {
+			   	//print 1D array (row number)
 			   	System.out.print("\n" + a[i] + "\t");	
 			   }
-			   
+			   //print 2D array (column letters)
 			   System.out.print(b[i][j]  + "\t");
 			}
 		}
 		
 		//Prompt user to choose seat
-		System.out.println("\n\n");
+		System.out.println("\n");
 		System.out.println("Choose your seat");
 		
 		do
@@ -89,7 +106,9 @@ public class assignment_final{
 				continue;
 			}
 			
-			//Taken seats replaced with 'X'
+			//Taken seats (2D array row and column elements) get replaced with 'X'
+			//Translates colChoice to y (corresponding column index)
+			//Choice from A,B,C or D capital or small
 		    if(colChoice.charAt(0) == 'A' || colChoice.charAt(0) == 'a'){
 		    	y = 0;
 		    	b[x-1][y] = "X";}
@@ -122,16 +141,20 @@ public class assignment_final{
 
 		      System.out.println("==========================================================");
 		
-		//Displays final seating
+		//Nested loop to display final seating
+		//i starts from zero (index of rows) is always less than no. of elements in the 1D array (index is always less by 1)
 		for(int i = 0; i<a.length; i++)
 		{
+			//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 			for(int j = 0; j<4; j++)
 			{
+				//beginning of row (index 0)
 			   if(j==0)
 			   {
+			   //print 1D array (row number)
 			   	System.out.print("\n" + a[i] + "\t");	
 			   }
-			   
+			   //print 2D array (column letters)
 			   System.out.print(b[i][j]  + "\t");
 			}
 		}
@@ -140,6 +163,9 @@ public class assignment_final{
 		System.out.println("\n");
 		System.out.println("=== Welcome Back ===");
 		System.out.println();
+		
+		//Prompt user to choose seat
+		System.out.println("Choose your seat");
 		
 		do
 		{
@@ -163,7 +189,9 @@ public class assignment_final{
 				continue;
 		    }
 		    
-		    //Available choices
+		    //Taken seats (2D array row and column elements) get replaced with 'X'
+		    //Translates colChoice to y (corresponding column index)
+			//Choice from A,B,C or D capital or small
 		    if(colChoice.charAt(0) == 'A' || colChoice.charAt(0) == 'a'){
 		    	y = 0;}
 		      else if(colChoice.charAt(0) == 'B' || colChoice.charAt(0) == 'b'){
@@ -176,15 +204,15 @@ public class assignment_final{
 		      	y = 3;
 		      }
 		      
-		    //When the seat is taken
+		    //When the seat is taken, display message
 		    if(b[x-1][y].equals("X"))
-		    	System.out.println("\nThe seat " + x + colChoice + " is already chosen please choose another.");
+		    	System.out.println("\nThe seat " + x + colChoice + " is already taken please choose another.");
 		    else{
-		    //When seat is available
+		    //When seat is available, replace it with 'X'
 		    	b[x-1][y] = "X";
 		    }
 		    
-		    //Ask user to continue or stop choosing seats
+		    //Asks user to continue or stop choosing seats
 		    System.out.println();
 			System.out.print("Continue to choose seat [y - yes | n - no]\t: ");
 		    cont2 = kb.next();
@@ -201,16 +229,20 @@ public class assignment_final{
 
 		      System.out.println("==========================================================");
 		
-		//Displays final seating
+		//Nested loop to display final seating
+		//i starts from zero (index of rows) is always less than no. of elements in the 1D array (index is always less by 1)
 		for(int i = 0; i<a.length; i++)
 		{
+			//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 			for(int j = 0; j<4; j++)
 			{
+				//beginning of row (index 0)
 			   if(j==0)
 			   {
+			   	//print 1D array (row number)
 			   	System.out.print("\n" + a[i] + "\t");	
 			   }
-			   
+			   //print 2D array (column letters)
 			   System.out.print(b[i][j]  + "\t");
 			}
 		}
