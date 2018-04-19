@@ -204,7 +204,7 @@ public class assignment_final{
 		      	y = 3;
 		      }
 		      
-		    //When the seat is taken, display message
+		    //When the seat is taken, display error message that returns the row no. and column letter the user entered
 		    if(b[x-1][y].equals("X"))
 		    	System.out.println("\nThe seat " + x + colChoice + " is already taken please choose another.");
 		    else{
