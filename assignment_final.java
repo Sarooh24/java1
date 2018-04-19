@@ -38,9 +38,9 @@ public class assignment_final{
 		
 		//Nested for loop to initilize elements of the arrays (according to user input)
 		//i starts from zero (index of rows) is always less than no. of elements in the 1D array (index is always less by 1)
-		//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 		for(int i = 0; i<a.length; i++)
 		{
+			//loops each column, j starts from zero (index of columns) is always less than no. of column letters
 			for(int j = 0; j<4; j++)
 			{
 				//beginning of row (index 0)
